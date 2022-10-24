@@ -1,0 +1,43 @@
+POST http://localhost:9000/api/logout
+Authorization:mysecret eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkbWhAZ21haWwuY29tIiwiaWF0IjoxNjU4Mzk3MzgwLCJleHAiOjE2NTgzOTc0MTB9.sSpDispob1jRM9B-yX643_dKLCY5t0rktQaRFskp4s4
+Content-Type: application/json
+
+{
+    "email":"dmh@gmail.com",
+    "id" : "1"
+}
+###
+POST http://localhost:9000/api/login/
+Content-Type: application/json
+
+{
+    "email":"dmh@gmail.com",
+    "password": "123"
+}
+###
+GET http://localhost:8090/api/get-all-user?id=ALL
+Authorization:mysecret eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJtaEBnbWFpbC5jb20iLCJyb2xlSWQiOiJSMSIsInBhc3N3b3JkIjoiJDJhJDEwJGpOY1huNkpENWpOSzc2Vmh0TTh1eS5ER1BBMVN4NVo3WGphbUI0M2xyNzlaYUs0Z0hCcjAuIiwiZmlyc3ROYW1lIjoiaGlldSIsImxhc3ROYW1lIjoiaGlldSIsImlhdCI6MTY1Nzc4ODE2MiwiZXhwIjoxNjU3Nzg4MTc3fQ.nAeoWig8PQdiHjCyKHS-9buWC4GlSSb8iUofB3RV0MU
+###
+POST http://localhost:8090/createuser/
+Content-Type: application/json
+
+{
+    "email":"dmh@gmail.com",
+    "password": "123",
+    "firstName":"Do",
+    "lastName":"Do",
+    "address":"Viet nam",
+    "gender":"M",
+    "roleId":"R1",
+    "phonenumber":"42137462784"
+}
+###
+POST http://localhost:9000/api/logout
+# Authorization:mysecret eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkbWhAZ21haWwuY29tIiwiaWF0IjoxNjU4Mzk2MDI5LCJleHAiOjE2NTgzOTYwNTl9.1ZLRDlPvE3VqgNKfNP5lAIxHY-Y8V1aLfixzLf5hL9c
+Content-Type: application/json
+{
+    "id": "1"
+}
+
+###
+GET http://localhost:9100/api/get-all-user
