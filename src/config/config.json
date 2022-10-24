@@ -1,9 +1,9 @@
 {
     "development": {
         "username": "root",
-        "password": null,
+        "password": "12345678",
         "database": "bookingcare_server",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "dialect": "mysql",
         "logging": false,
         "port": "3306",
