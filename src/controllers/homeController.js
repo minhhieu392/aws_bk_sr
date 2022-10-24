@@ -1,16 +1,17 @@
 import db from '../models/index';
 import CRUDService from '../services/CRUDService'
-// let getHomePage = async(req, res) => {
-//     try {
-//         let data = await db.User.findAll();
-//         console.log(data);
-//         return res.render('homepage.ejs', {
-//             data: JSON.stringify(data)
-//         });
-//     } catch (err) {
-//         console.log(err);
-//     }
-// }
+
+let getHomePage = async(req, res) => {
+    try {
+        let data = await db.User.findAll();
+        console.log(data);
+        return res.render('homepage.ejs', {
+            data: JSON.stringify({})
+        });
+    } catch (err) {
+        console.log(err);
+    }
+}
 let getAboutPage = (req, res) => {
     return res.render('test/aboutpage.ejs');
 }
@@ -51,6 +52,7 @@ let deleteCRUD = async(req, res) => {
     return res.send('delete succefuly');
 }
 module.exports = {
+    getHomePage:getHomePage,
     getAboutPage: getAboutPage,
     createuser: createuser,
     displaygetCRUD: displaygetCRUD,

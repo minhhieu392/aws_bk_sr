@@ -4,8 +4,7 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('bookingcare_server', 'root', '12345678', {
     host: 'localhost',
     dialect: 'mysql',
-    logging: false,
-    port: '3306'
+    logging: false
 });
 
 let connectDB = async() => {

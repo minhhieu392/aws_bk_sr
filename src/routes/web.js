@@ -10,6 +10,8 @@ let router = express.Router();
 //rest api 
 let initWebRouters = (app) => {
 
+    router.get('/', homeController.getHomePage);
+
     router.post('/api/login', userControler.handleLogin);
     router.post('/api/signUp', userControler.handleCreateNewUser);
 

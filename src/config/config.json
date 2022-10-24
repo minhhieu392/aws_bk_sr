@@ -6,7 +6,6 @@
         "host": "localhost",
         "dialect": "mysql",
         "logging": false,
-        "port": "3306",
         "query":{
             "raw":true
         }, 
